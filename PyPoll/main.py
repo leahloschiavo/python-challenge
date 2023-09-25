@@ -8,45 +8,73 @@ file_to_load = os.path.join("Resources","election_data.csv")
 
 #variables to access row
 total_votes = 0
-votes_per_candidate = []
-percent_per_candidate = []
-politicians = ["Charles Casper Stockham", "Diane DeGette"
- "Raymon Anthony Doane"]
-
-candidates = list(zip(politicians, total votes, 
-percent per candidate))
+votes_diana = 0
+votes_charles = 0
+votes_raymon = 0 
+most_votes = winner
+candidate_name = "Charles Casper Stockham", "Diana DeGette", "Raymon Anthony Doane" 
 
 
 with open(file_to_load) as ElectionResults:
     reader = csv.reader(ElectionResults)
     header = next(reader)
-    next_line = next(reader)
-    candidate_name.append(row[2])
+    total_votes += 1 
+    
+
     for row in reader:
          print(row)
-
          # Add votes in list
          total_votes += 1 
-
-         # List each candidate individually 
-
-
-
-         # Add individual candidate votes
-
-
-         #Determine percentage of votes each winner
-
-         # Determine name of winner 
          
+         
+         # Add individual candidate votes
+         if row[2] == "Charles Casper Stockham":
+              votes_charles +=1
+         elif row[2] == "Diana DeGette":
+              votes_diana +=1
+         else:
+              votes_raymon+=1
+
+
+              charles = votes_charles /total_votes*100
+              diana = votes_diana /total_votes*100
+              raymon = votes_raymon /total_votes*100
+              most_votes = ("Winner", "Diana DeGette" )  
 
 
 
 
+              
+                   
 
 
+
+  
+
+
+
+     
 print(total_votes)
+print(candidate_name)
+print(votes_charles)
+print(votes_diana)
+print(votes_raymon)
+print(charles)
+print(diana)
+print(raymon)
+print(most_votes)
+
+
+
+
+
+
+
+
 
 
     
 
+
+         
+        

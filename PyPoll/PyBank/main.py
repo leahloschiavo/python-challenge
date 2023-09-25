@@ -52,7 +52,6 @@ with open(load_file) as FinancialData:
  
     average_change = profit_loss_change.index(max_increase_value) + 1
 
-    #average of profit/losses over time
 
     
     
