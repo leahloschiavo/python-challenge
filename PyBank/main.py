@@ -30,6 +30,7 @@ with open(load_file) as FinancialData:
         profit_total = int(row[1])
         # get average of changes in profit_loss
         profit_loss_change.append(profit_loss - profit_initial)
+    
         month_list.append(row[0])
         profit_initial = profit_loss 
        
@@ -48,33 +49,26 @@ with open(load_file) as FinancialData:
 
     max_increase_month = profit_loss_change.index(max_increase_value) +1    
     max_decrease_month = profit_loss_change.index(max_decrease_value) +1  
+ 
+    average_change = profit_loss_change.index(max_increase_value) + 1
 
-
-   
-
-    
-    
-
-    
     #average of profit/losses over time
 
     
     
-    
-
-
-
-
-
-
-
-
-
 
 print(total_months)
 print(profit_loss_total)
 print(month_list[max_increase_month])
 print(month_list[max_decrease_month])
+print(sum(profit_loss_change)/len(profit_loss_change))
+
+
+
+
+
+
+
 
 
 
